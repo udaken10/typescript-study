@@ -1,10 +1,22 @@
-# TypeScript Study Project
+# TypeScript Study Workspace
 
-このプロジェクトは、Docker環境でTypeScriptを学ぶためのサンプルプロジェクトです。
+TypeScriptを体系的に学ぶためのワークスペースです。
 
-## クイックスタート
+## ディレクトリ構成
 
-1.  コンテナを起動: `docker-compose up -d`
-2.  学習を開始: [curriculum/README.md](./curriculum/README.md) を開く
+- **[docs/](./docs/)**: Markdown形式の教科書。
+- **[practice/](./practice/)**: 教科書の内容を試せる練習スクリプト。
+- **[projects/](./projects/)**: 実際に動く小さなアプリ。
 
-詳細はカリキュラムの目次を参照してください。
+## 使い方
+
+1. Dockerコンテナの起動:
+   ```bash
+   docker-compose up -d
+   ```
+2. コンテナ内での実行:
+   ```bash
+   docker-compose exec app npm run verify
+   ```
+
+各ディレクトリのファイルを開いて学習を始めてください。

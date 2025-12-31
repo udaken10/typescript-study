@@ -6,7 +6,12 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "rootDir": "./"
   },
-  "include": ["curriculum/**/*.ts"]
+  "include": [
+    "src/**/*.ts",
+    "practice/**/*.ts",
+    "projects/**/*.ts"
+  ]
 }
