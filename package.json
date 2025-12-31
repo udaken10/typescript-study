@@ -1,0 +1,14 @@
+{
+    "name": "typescript-study",
+    "version": "1.0.0",
+    "description": "TypeScript Learning Project",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "run:ex": "ts-node",
+        "save": "git add . && git commit -m"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "ts-node": "^10.9.1"
+    }
+}
