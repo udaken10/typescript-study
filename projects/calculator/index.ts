@@ -1,15 +1,34 @@
 /**
- * Project: Calculator
+ * Project: TypeScript Calculator
  * 
- * 簡単な計算機を実装してみましょう。
+ * ユニオン型と列挙型を活用した計算機の実装例です。
  */
 
-function calculate(a: number, b: number, op: string): number {
-    switch (op) {
-        case "+": return a + b;
-        case "-": return a - b;
-        default: return 0;
-    }
-}
+type Operation = "+" | "-" | "*" | "/";
 
-console.log("Result:", calculate(10, 5, "+"));
+const calculate = (a: number, b: number, op: Operation): number => {
+    switch (op) {
+        case "+":
+            return a + b;
+        case "-":
+            return a - b;
+        case "*":
+            return a * b;
+        case "/":
+            if (b === 0) {
+                console.error("Error: Division by zero");
+                return NaN;
+            }
+            return a / b;
+    }
+};
+
+const a = 10;
+const b = 5;
+
+console.log(`${a} + ${b} = ${calculate(a, b, "+")}`);
+console.log(`${a} - ${b} = ${calculate(a, b, "-")}`);
+console.log(`${a} * ${b} = ${calculate(a, b, "*")}`);
+console.log(`${a} / ${b} = ${calculate(a, b, "/")}`);
+
+// 実行方法: npx ts-node projects/calculator/index.ts
